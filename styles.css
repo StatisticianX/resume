@@ -18,7 +18,7 @@ body {
 header {
     background-color: rgba(34, 39, 51, 1);
     color: var(--main-text-color);
-    padding: 0px 25px;
+    padding: 0 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +46,7 @@ header {
 .nav_bar a {
     color: var(--main-text-color);
     margin: 0 10px;
-    text-decoration: None;
+    text-decoration: none;
     transition: color 0.3s ease;
     font-size: 16.5px;
 }
@@ -120,7 +120,6 @@ header {
     font-size: 15px;
 }
 
-/* Projects Section Styles */
 #projects-section {
     display: flex;
     flex-wrap: wrap;
