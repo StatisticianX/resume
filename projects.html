@@ -13,12 +13,12 @@
 
     <header>
         <div class="portfolio-heading">
-            <h1>Portfolio<span style="color: #08f0ff;">.</span></h1>
+            <h1><a href="index.html" class="portfolio-link">Portfolio</a><span style="color: var(--highlight-color);">.</span></h1>
         </div>
         <div class="nav_bar">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -26,20 +26,16 @@
 
     <section id="projects-section">
         <h2 class="section-heading">Projects</h2>
-
         <div class="project-post">
-            <h3><a href="project1.html">Data Science Project</a></h3>
-            <p>Description of Project 1.</p>
-            <a href="project1.html" class="learn-more-link">Learn More</a>
-            <div class="project-details" id="project1-details">
-                <p>Additional details about Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3><a href="project1.html">Crop Recommendation System</a></h3>
+            <p>Tools used: Python, HTML, CSS, Flask, Basic ML knowledge.</p>
             </div>
         </div>
 
         <div class="project-post">
             <h3><a href="project2.html">Project 2</a></h3>
             <p>Description.</p>
-            <a href="project2.html" class="learn-more-link">Learn More</a>
+            <a href="project2.html" class="learn-more-link" data-details="project2-details">Learn More</a>
             <div class="project-details" id="project2-details">
                 <p>Additional details about Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
@@ -48,7 +44,7 @@
         <div class="project-post">
             <h3><a href="project3.html">Project 3</a></h3>
             <p>Description of Project 3.</p>
-            <a href="project3.html" class="learn-more-link">Learn More</a>
+            <a href="project3.html" class="learn-more-link" data-details="project3-details">Learn More</a>
             <div class="project-details" id="project3-details">
                 <p>Additional details about Project 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
@@ -61,14 +57,17 @@
         document.querySelectorAll('.learn-more-link').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
+                
+                const detailsId = this.getAttribute('data-details');
+                const projectDetails = document.getElementById(detailsId);
+                
                 document.querySelectorAll('.project-details').forEach(details => {
                     details.style.display = 'none';
                 });
 
-                document.querySelector(this.getAttribute('href').replace('.html', '') + '-details').style.display = 'block';
+                projectDetails.style.display = 'block';
 
-                document.querySelector(this.getAttribute('href').replace('.html', '')).scrollIntoView({
+                projectDetails.scrollIntoView({
                     behavior: 'smooth'
                 });
             });

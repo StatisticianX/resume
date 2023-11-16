@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: #222733;
-    --highlight-color: #00eeff;
+    --highlight-color: #00a2ff;
     --main-text-color: #fff;
     --section-bg-color: #35424a;
 }
@@ -121,13 +121,14 @@ header {
 }
 
 #projects-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .project-post {
-    width: calc(100% - 20px);
+    width: 900px;
     background-color: var(--section-bg-color);
     color: var(--main-text-color);
     padding: 20px;
@@ -135,11 +136,6 @@ header {
     border-radius: 5px;
     box-sizing: border-box;
     cursor: pointer;
-}
-
-.project-post:hover {
-    background-color: var(--highlight-color);
-    color: var(--main-bg-color);
 }
 
 .project-post h3 {
