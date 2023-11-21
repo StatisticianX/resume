@@ -38,13 +38,13 @@ header {
     color: #fff;
 }
 
-/* Nav_bar Styles */
 .nav_bar {
     display: flex;
 }
 
 .nav_bar a {
     color: var(--main-text-color);
+    display: block;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -396,4 +396,29 @@ form button:hover {
 #data-science-project p {
     font-size: 1.125rem;
     margin-bottom: 20px;
+}
+
+.nav_bar .animated-card {
+    margin-right: 10px; /* Adjust the margin as needed */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav_bar .animated-card:hover {
+    transform: scale(1.1);
+}
+
+.animated-card {
+    background-color: var(--section-bg-color);
+    color: var(--main-text-color);
+    padding: 6px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.animated-card:hover {
+    transform: scale(1.15);
 }
