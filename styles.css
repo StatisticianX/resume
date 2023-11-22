@@ -14,7 +14,6 @@ body {
     padding: 0;
 }
 
-/* Header Styles */
 header {
     background-color: rgba(34, 39, 51, 1);
     color: var(--main-text-color);
@@ -55,7 +54,6 @@ header {
     color: var(--highlight-color);
 }
 
-/* Hello Section Styles */
 #hello-section,
 header {
     display: flex;
@@ -82,7 +80,6 @@ header {
     margin: 10px 0 0 0;
 }
 
-/* Social Buttons Styles */
 .social-buttons {
     text-align: center;
     margin-top: 20px;
@@ -164,10 +161,8 @@ header {
     border-radius: 5px;
 }
 
-/* Buttons Styles */
 .download-button,
-.read-more-button,
-.back-button,
+.back-button
 .back-link {
     display: inline-block;
     background-color: var(--highlight-color);
@@ -180,22 +175,36 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: var(--highlight-color);
+    color: var(--main-bg-color);
+    padding: 2px 5px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid var(--highlight-color);
+}
+
 .download-button:hover,
-.read-more-button:hover,
 .back-button:hover,
 .back-link:hover {
     background-color: var(--main-text-color);
     color: #35424a;
 }
 
-/* Section Heading Styles */
 .section-heading {
     color: var(--main-text-color);
     font-size: 2.25rem;
     margin: 0;
 }
 
-/* Responsive Styles */
 @media only screen and (max-width: 768px) {
     #hello-section {
         margin: 40px auto;
@@ -210,7 +219,6 @@ header {
     }
 }
 
-/* About Section Styles */
 #about-section {
     text-align: left;
     max-width: 900px;
@@ -223,7 +231,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* Transition Styles */
 .transition-mask {
     position: fixed;
     top: 0;
@@ -264,18 +271,17 @@ header {
 }
 
 body.transition-active {
-    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar during transition */
+    overflow: hidden;
     transition: opacity 1s ease-in-out;
     opacity: 0;
 }
 
-/* Contact Section Styles */
 #contact-section {
     position: sticky;
     top: 0;
     text-align: center;
-    overflow: hidden; /* Remove scrolling */
-    z-index: 1000; /* Adjust the z-index as needed */
+    overflow: hidden; 
+    z-index: 1000; 
 }
 
 #contact-section iframe {
@@ -302,7 +308,6 @@ form button {
     box-sizing: border-box;
 }
 
-/* Form Button Styles */
 form button {
     background-color: var(--highlight-color);
     color: var(--main-bg-color);
@@ -317,7 +322,6 @@ form button:hover {
     background-color: var(--main-text-color);
 }
 
-/* Social Buttons Styles (Repeated) */
 .social-buttons {
     text-align: center;
     margin-top: 20px;
@@ -332,7 +336,6 @@ form button:hover {
     transition: color 0.3s ease;
 }
 
-/* Key Skills Section Styles */
 .key-skills-section {
     margin-top: 30px;
 }
@@ -352,30 +355,6 @@ form button:hover {
     color: var(--main-text-color);
 }
 
-/* Add more stylized back button styles */
-.back-button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.back-button {
-    display: inline-block;
-    background-color: var(--highlight-color);
-    color: var(--main-bg-color);
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 2px solid var(--highlight-color);
-}
-
-.back-button:hover {
-    background-color: var(--main-text-color);
-    color: #35424a;
-}
-
-/* Add this new class for image styling */
 #data-science-project .project-image {
     display: block;
     margin: 15px auto; /* Center the image horizontally */
@@ -409,11 +388,11 @@ form button:hover {
 }
 
 .animated-card {
-    background-color: var(--section-bg-color);
-    color: var(--main-text-color);
-    padding: 6px;
+    background-color: var(--main-bg-color);
+    color: var(--highlight-color);
+    padding: 4px;
     border-radius: 7px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(9, 9, 9);
     text-align: center;
     overflow: hidden;
     transition: transform 0.2s ease-in-out;
@@ -454,3 +433,4 @@ form button:hover {
         max-width: 100%;
     }
 }
+
